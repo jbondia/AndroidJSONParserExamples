@@ -9,7 +9,9 @@ It is the Android app where you can see how to parse a JSON in the natural way, 
 
 In order to parse a JSON object:<br />
 
-<code>
+```java
+public void parseExample(JSONObject jsonObject) {
+    
     int intArg = jsonObject.getInt("paramName");
     long longArg = jsonObject.getLong("paramName");
     String stringArg = jsonObject.getString("paramName");
@@ -23,7 +25,8 @@ In order to parse a JSON object:<br />
         anotherLong = jsonArray.getJSONObject(i).getInt("paramName");
         anotherString = jsonArray.getJSONObject(i).getString("paramName");
     }
-</code>
+}
+```
 
 So, these are the basics to parse a JSON using the tools provided directly by Android, they are found in **CharacterDataParser.java** file in the **util** package.
 
