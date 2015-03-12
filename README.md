@@ -10,7 +10,6 @@ It is the Android app where you can see how to parse a JSON in the natural way, 
 In order to parse a JSON object:<br />
 <code>
 public void parseExample(JSONObject jsonObject) {
-
     int intArg = jsonObject.getInt("paramName");
     long longArg = jsonObject.getLong("paramName");
     String stringArg = jsonObject.getString("paramName");
