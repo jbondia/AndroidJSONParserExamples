@@ -4,10 +4,10 @@ This repository aims to show some ways on how to parse a JSON within an Android 
 ## SimpleBackend
 SimpleBackend is a backend implemented to provide a simple REST API to get the JSON from the Internet (the most usual way). It is implemented with Grails 2.4.2 and it only provides one method, accessible through HTTP GET, and it returns a single object in JSON format.
 
-<strong>BasicJSONParser</strong>
+## BasicJSONParser
 It is the Android app where you can see how to parse a JSON in the natural way, meaning without any library support nor reflection. The app provides the main view where there is a ListView with the downloaded chracters (just one in this case; see Future Work).
 
-In order to parse a JSON object:
+In order to parse a JSON object:<br />
 <code>
 public void parseExample(JSONObject jsonObject) {
 
