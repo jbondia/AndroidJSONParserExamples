@@ -123,6 +123,7 @@ class CharacterController extends RestfulController {
                 race: character.race,
                 armor: character.armors.collect { Armor a ->
                     [
+                            id: a.id,
                             ilevel: a.level,
                             name: a.name
                     ]

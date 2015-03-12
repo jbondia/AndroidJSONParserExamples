@@ -1,21 +1,22 @@
 package com.jbondia.basicjsonparser.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by jbondia on 10/03/15.
  */
-public class Character {
+public class Character implements Serializable {
 
     private long id;
-    private int gold;
+    private long gold;
     private int level;
     private String name;
     private String type;
     private String race;
     private ArrayList<Armor> armors;
 
-    public Character(long id, int gold, int level, String name, String type, String race) {
+    public Character(long id, long gold, int level, String name, String type, String race) {
         this.id = id;
         this.gold = gold;
         this.level = level;
@@ -25,7 +26,7 @@ public class Character {
         this.armors = new ArrayList<>();
     }
 
-    public Character(long id, int gold, int level, String name, String type, String race, ArrayList<Armor> armors) {
+    public Character(long id, long gold, int level, String name, String type, String race, ArrayList<Armor> armors) {
         this.id = id;
         this.gold = gold;
         this.level = level;
@@ -43,11 +44,11 @@ public class Character {
         this.id = id;
     }
 
-    public int getGold() {
+    public long getGold() {
         return gold;
     }
 
-    public void setGold(int gold) {
+    public void setGold(long gold) {
         this.gold = gold;
     }
 

@@ -25,7 +25,7 @@ public class CharacterDataParser {
         try {
             /* Get values of simple attributes in Character */
             long id = jsonObject.getLong("id");
-            int gold = jsonObject.getInt("gold");
+            long gold = jsonObject.getLong("gold");
             int level = jsonObject.getInt("level");
             String race = jsonObject.getString("race");
             String type = jsonObject.getString("class");
@@ -44,6 +44,7 @@ public class CharacterDataParser {
 
     private static ArrayList<Armor> jsonArmorParser(JSONArray jsonArray) {
 
+        long id;
         int level;
         String name;
         Armor armor;
@@ -51,9 +52,10 @@ public class CharacterDataParser {
 
         try {
             for(int i = 0; i < jsonArray.length(); i++) {
+                id = jsonArray.getJSONObject(i).getLong("id");
                 level = jsonArray.getJSONObject(i).getInt("ilevel");
                 name = jsonArray.getJSONObject(i).getString("name");
-                armor = new Armor(level, name);
+                armor = new Armor(id, level, name);
                 armors.add(armor);
                 armor = null;
             }
