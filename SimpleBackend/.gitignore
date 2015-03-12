@@ -3,6 +3,10 @@
 # web application files
 /web-app/WEB-INF/classes
 
+# project
+.idea/workspace.xml
+tasks.xml
+
 # default HSQL database files for production mode
 /prodDb.*
 
